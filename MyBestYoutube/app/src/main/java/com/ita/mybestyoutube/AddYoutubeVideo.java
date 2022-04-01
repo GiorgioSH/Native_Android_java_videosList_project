@@ -76,18 +76,13 @@ public class AddYoutubeVideo extends AppCompatActivity {
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }else{
-                    // créé le Todo
                     YoutubeVideo youtubeVideo = new YoutubeVideo(title, description, url, category);
 
-                    // ajoute le Todo en BDD
                     YoutubeDAO youtubeDAO = new YoutubeDAO(getApplicationContext());
                     youtubeDAO.add(youtubeVideo);
 
-                    // revient à la MainActivity
                     finish();
                 }
-
-
             }
         });
 
